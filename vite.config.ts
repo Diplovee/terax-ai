@@ -8,6 +8,9 @@ const host = process.env.TAURI_DEV_HOST;
 // https://vite.dev/config/
 export default defineConfig(async ({ mode }) => ({
   plugins: [react(), tailwindcss()],
+  // Tauri loads the packaged app through its own protocol, so production
+  // asset URLs need to be relative instead of rooted at `/`.
+  base: mode === "development" ? "/" : "./",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -72,7 +75,7 @@ export default defineConfig(async ({ mode }) => ({
   server: {
     port: 1420,
     strictPort: true,
-    host: host || false,
+    host: host || "127.0.0.1",
     hmr: host
       ? {
           protocol: "ws",
