@@ -126,6 +126,10 @@ bun run dev             # development
 bun run build           # production bundle
 ```
 
+**Fork maintenance**
+
+If you are working from Diplov's fork and need to pull new changes from `crynta/terax-ai` without losing the local startup fixes, use [docs/DIPLOV_UPSTREAM_SYNC.md](docs/DIPLOV_UPSTREAM_SYNC.md).
+
 **Checks**
 ```bash
 pnpm exec tsc --noEmit                                            # frontend type-check
