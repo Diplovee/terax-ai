@@ -121,9 +121,9 @@ Latest installers are on the [Releases](https://github.com/crynta/terax-ai/relea
 
 **Run**
 ```bash
-pnpm install
-pnpm tauri dev          # development
-pnpm tauri build        # production bundle
+bun install
+bun run dev             # development
+bun run build           # production bundle
 ```
 
 **Checks**
